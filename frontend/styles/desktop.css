@@ -6,6 +6,14 @@
     overflow: hidden;
 }
 
+.window-body {
+    padding: 20px 25px; 
+    height: calc(100% - 35px); 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
 /* Ícones da Área de Trabalho */
 .desktop-icons {
     display: flex;
@@ -62,7 +70,7 @@
 }
 
 .start-button {
-    width: 100px;
+    width: 115px;
     height: 100%;
     background: radial-gradient(circle at center, #3e9c43 0%, #1f6b23 100%);
     border-radius: 0 15px 15px 0;
@@ -98,6 +106,7 @@
     display: flex;
     gap: 5px;
     margin-bottom: 10px;
+    align-items: center;
 }
 
 .task-input-area input {
