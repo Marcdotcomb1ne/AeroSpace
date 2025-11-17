@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroSpace - Desktop</title>
+    
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/desktop.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="desktop-area">
+        
+        <div class="desktop-icons">
+            <div class="desktop-icon" onclick="toggleWindow('profileWindow')">
+                <img src="https://img.icons8.com/fluency/96/user-male-circle.png" alt="Perfil">
+                <span>Meu Perfil</span>
+            </div>
+            <div class="desktop-icon" onclick="toggleWindow('comunidadeWindow')">
+                <img src="https://img.icons8.com/fluency/96/msn.png" alt="Comunidade">
+                <span>AeroChat</span>
+            </div>
+            <div class="desktop-icon" onclick="toggleWindow('taskWindow')">
+                <img src="https://img.icons8.com/fluency/96/todo-list.png" alt="Tasks">
+                <span>Tasks</span>
+            </div>
+            <div class="desktop-icon">
+                <img src="https://img.icons8.com/fluency/96/full-trash.png" alt="Lixeira">
+                <span>Lixeira</span>
+            </div>
+        </div>
+
+        <div class="aero-window" id="taskWindow" style="display: none; top: 15%; left: 60%;">
+            <div class="window-header" id="taskHeader">
+                <div class="title">
+                    <img src="https://img.icons8.com/fluency/24/todo-list.png">
+                    Minhas Missões
+                </div>
+                <div class="controls">
+                    <button class="btn-win min" onclick="toggleWindow('taskWindow')">_</button>
+                    <button class="btn-win close" onclick="toggleWindow('taskWindow')">X</button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="task-input-area">
+                    <input type="text" id="newTaskInput" placeholder="Nova missão..." onkeypress="handleEnter(event)">
+                    <button class="btn-glossy-small" onclick="addTask()">Add</button>
+                </div>
+                <ul id="taskList" class="scroll-aero">
+                    <li class="loading-text">Carregando missões...</li>
+                </ul>
+            </div>
+            <div class="window-footer">
+                <span id="statusMsg">Conectado</span>
+            </div>
+        </div>
+
+        <div class="aero-window" id="profileWindow" style="display: none; top: 10%; left: 10%;">
+            <div class="window-header" id="profileHeader">
+                <div class="title">Propriedades de Usuário</div>
+                <div class="controls">
+                    <button class="btn-win close" onclick="toggleWindow('profileWindow')">X</button>
+                </div>
+            </div>
+            <div class="window-body" style="text-align: center;">
+                <img src="https://img.icons8.com/fluency/96/user-male-circle.png" style="margin-bottom: 10px;">
+                <h3 id="usernameDisplay">Visitante</h3>
+                <p>Nível 1 - Iniciante Aero</p>
+                <button class="btn-glossy" onclick="logout()">Fazer Logoff</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="taskbar">
+        <div class="start-button">
+            <img src="https://img.icons8.com/fluency/48/windows-client.png" alt="Start">
+            <span>Iniciar</span>
+        </div>
+        <div class="task-items" id="openWindowsList">
+            </div>
+        <div class="tray-area">
+            <span id="clock">12:00</span>
+        </div>
+    </div>
+
+    <script type="module" src="/scripts/desktop.js"></script>
+</body>
+</html>

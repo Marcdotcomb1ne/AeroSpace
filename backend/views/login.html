@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao AeroSpace</title>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="user-display">
+            <div class="avatar-frame">
+                <img src="https://img.icons8.com/fluency/96/user-male-circle.png" alt="User" id="avatarImg">
+            </div>
+            <h2 id="welcomeText">AeroSpace</h2>
+        </div>
+
+        <div class="form-area">
+            
+            <form id="loginForm" class="aero-form active">
+                <div class="input-group">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="loginPass" placeholder="Senha" required>
+                </div>
+                <button type="submit" class="btn-arrow"></button>
+                
+                <div class="form-footer">
+                    <a href="#" onclick="toggleForms()">Criar uma conta nova</a>
+                </div>
+            </form>
+
+            <form id="registerForm" class="aero-form">
+                <div class="input-group">
+                    <input type="text" id="regUser" placeholder="Nome de Usuário" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="regEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="regPass" placeholder="Senha" required>
+                </div>
+                <button type="submit" class="btn-glossy">Criar Conta</button>
+
+                <div class="form-footer">
+                    <a href="#" onclick="toggleForms()">Já tenho conta</a>
+                </div>
+            </form>
+
+            <div id="feedback" class="feedback-msg"></div>
+        </div>
+    </div>
+
+    <div class="login-footer">
+        <span>AeroSpace</span>
+    </div>
+
+    <script type="module" src="/scripts/login.js"></script>
+</body>
+</html>

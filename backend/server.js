@@ -6,6 +6,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import pageRoutes from './routes/pages.routes.js';
 import Taskroutes from './routes/task.routes.js';
+import authRoutes from './routes/auth.routes.js';
 
 const app = express();
 const PORT = 3004;
@@ -21,6 +22,7 @@ app.use(express.static(path.join(__dirname, '..', 'frontend')));
 // Configuração das Rotas
 app.use(pageRoutes);
 app.use('/api/tasks', Taskroutes);
+app.use('/api/auth', authRoutes);
 
 app.listen(PORT, () => {
     console.log(`✅  Server is running in http://localhost:${PORT}`);

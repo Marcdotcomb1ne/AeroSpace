@@ -1,0 +1,161 @@
+/* Fundo Aurora Boreal */
+body {
+    background-image: radial-gradient(circle at 50% 20%, #25a3d494 0%, #92beffd5 50%, #87bbff 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+/* Container Central (Vidro) */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+}
+
+/* Avatar com borda brilhante */
+.avatar-frame {
+    width: 120px;
+    height: 120px;
+    border: 4px solid rgba(255, 255, 255, 0.6);
+    border-radius: 10px; /* Quadrado arredondado estilo Vista */
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 0 auto 15px auto;
+}
+
+.avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-display h2 {
+    color: white;
+    font-weight: 400;
+    font-size: 28px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    margin: 0;
+}
+
+.status-text {
+    color: #bce0fd;
+    font-size: 14px;
+    margin-top: 5px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
+
+/* Formulários */
+.aero-form {
+    display: none; /* Escondido por padrão */
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    animation: fadeIn 0.5s;
+}
+
+.aero-form.active {
+    display: flex;
+}
+
+/* Inputs de Vidro */
+.input-group input {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #1e5799;
+    border-radius: 4px;
+    padding: 8px 10px;
+    width: 250px;
+    font-size: 14px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #52b0e4;
+    box-shadow: 0 0 5px #52b0e4;
+}
+
+/* Botão Seta (Login) */
+.btn-arrow {
+    background: url('https://img.icons8.com/fluency/48/arrow.png') no-repeat center;
+    background-size: 24px;
+    background-color: #ffffff; /* Verde Windows */
+    width: 36px;
+    height: 36px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.btn-arrow:hover {
+    background-color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Botão Normal (Cadastro) */
+.btn-glossy {
+    background: linear-gradient(to bottom, #f2f9fe 0%, #d6f0fd 50%, #bee6fd 51%, #a7d9f5 100%);
+    border: 1px solid #3d8eb9;
+    border-radius: 20px;
+    padding: 8px 25px;
+    color: #1b4f72;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+.login-footer {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.power-btn {
+    background: linear-gradient(to bottom, #d56060 0%, #a80e0e 100%);
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(168, 14, 14, 0.6);
+}
+
+.power-btn img { width: 24px; height: 24px; display: block; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.feedback-msg {
+    height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+}

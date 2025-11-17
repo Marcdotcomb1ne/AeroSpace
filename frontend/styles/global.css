@@ -1,6 +1,6 @@
 /* Fundo do Desktop */
 body {
-    background: url('https://i.imgur.com/ZOKp8R0.jpg') no-repeat center center fixed; /* Wallpaper clássico */
+    background: url('/assets/imgs/wallpaper.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     height: 100vh;
