@@ -10,12 +10,12 @@ window.toggleForms = () => {
         loginForm.classList.remove('active');
         registerForm.classList.add('active');
         title.innerText = "Novo Usuário";
-        avatar.src = "https://img.icons8.com/fluency/96/add-user-male.png";
+        avatar.src = "/assets/imgs/profile.png";
     } else {
         registerForm.classList.remove('active');
         loginForm.classList.add('active');
         title.innerText = "AeroSpace";
-        avatar.src = "https://img.icons8.com/fluency/96/user-male-circle.png";
+        avatar.src = "/assets/imgs/profile.png";
     }
     clearFeedback();
 };
