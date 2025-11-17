@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroSpace</title>
+</head>
+
+<body>
+    <div class="aero-desktop">
+
+        <div class="aero-window" id="taskWindow">
+            <div class="window-header">
+                <div class="window-title">
+                    <img src="https://img.icons8.com/fluency/48/todo-list.png" alt="icon">
+                    <span>Minhas Missões</span>
+                </div>
+                <div class="window-controls">
+                    <button class="btn-min">_</button>
+                    <button class="btn-close">X</button>
+                </div>
+            </div>
+
+            <div class="window-content">
+                <div class="task-input-group">
+                    <input type="text" id="newTaskInput" placeholder="O que vamos fazer hoje?">
+                    <button onclick="addTask()" class="btn-glossy">Add</button>
+                </div>
+                <ul id="taskList" class="glass-list">
+                </ul>
+            </div>
+
+            <div class="window-footer">
+                Agendado: Hoje
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
