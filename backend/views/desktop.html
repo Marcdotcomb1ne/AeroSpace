@@ -17,7 +17,7 @@
         
         <div class="desktop-icons">
             <div class="desktop-icon" onclick="toggleWindow('profileWindow')">
-                <img src="/assets/imgs/profile.png" alt="Perfil">
+                <img src="/assets/imgs/profile.png" alt="Perfil" id="desktopAvatar">
                 <span>Meu Perfil</span>
             </div>
             <div class="desktop-icon" onclick="toggleWindow('comunidadeWindow')">
@@ -28,9 +28,51 @@
                 <img src="https://img.icons8.com/fluency/96/todo-list.png" alt="Tasks">
                 <span>Tasks</span>
             </div>
-            <div class="desktop-icon">
-                <img src="https://img.icons8.com/fluency/96/full-trash.png" alt="Lixeira">
-                <span>Lixeira</span>
+            <div class="desktop-icon" onclick="toggleWindow('curatoriaWindow')">
+                <img src="https://img.icons8.com/fluency/96/folder-invoices.png" alt="Curadoria">
+                <span>Curadoria</span>
+            </div>
+        </div>
+
+        <div class="mood-widget" onclick="toggleWindow('moodSelector')">
+            <div class="mood-icon" id="moodIcon">😊</div>
+            <div class="mood-text" id="moodText">Vibe tranquila</div>
+        </div>
+
+        <div class="aero-window mood-selector" id="moodSelector" style="display: none; width: 400px; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div class="window-header">
+                <div class="title">Como você está se sentindo?</div>
+                <div class="controls">
+                    <button class="btn-win close" onclick="toggleWindow('moodSelector')">X</button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="mood-options">
+                    <div class="mood-option" onclick="setMood('chill', '😊', 'Vibe tranquila')">
+                        <span class="emoji">😊</span>
+                        <span class="label">Tranquilo</span>
+                    </div>
+                    <div class="mood-option" onclick="setMood('sad', '😢', 'Chovendo por dentro')">
+                        <span class="emoji">😢</span>
+                        <span class="label">Melancólico</span>
+                    </div>
+                    <div class="mood-option" onclick="setMood('hyper', '🤩', 'Energia total!')">
+                        <span class="emoji">🤩</span>
+                        <span class="label">Hypado</span>
+                    </div>
+                    <div class="mood-option" onclick="setMood('retro', '🌈', 'Nostalgia pura')">
+                        <span class="emoji">🌈</span>
+                        <span class="label">Nostálgico</span>
+                    </div>
+                    <div class="mood-option" onclick="setMood('cyber', '🤖', 'Vibe futurista')">
+                        <span class="emoji">🤖</span>
+                        <span class="label">Futurista</span>
+                    </div>
+                    <div class="mood-option" onclick="setMood('zen', '🧘', 'Paz interior')">
+                        <span class="emoji">🧘</span>
+                        <span class="label">Zen</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -64,10 +106,54 @@
                 </div>
             </div>
             <div class="window-body" style="text-align: center;">
-                <img src="/assets/imgs/profile.png" style="margin-bottom: 10px;">
+                <img src="C:\Users\henry\Documents\GitHub\AeroSpace\frontend\assets\imgs\profile.png" id="profileAvatar" style="margin-bottom: 10px; cursor: pointer; width: 96px; height: 96px; border-radius: 8px;" onclick="changeAvatar()">
                 <h3 id="usernameDisplay">Visitante</h3>
-                <p>Nível 1 - Iniciante Aero</p>
+                <button class="btn-glossy" onclick="document.getElementById('wallpaperInput').click()">Mudar Wallpaper</button>
+                <input type="file" id="wallpaperInput" accept="image/*" style="display: none;" onchange="changeWallpaper(event)">
+                <br><br>
                 <button class="btn-glossy" onclick="logout()">Fazer Logoff</button>
+            </div>
+        </div>
+
+        <div class="aero-window" id="curatoriaWindow" style="display: none; width: 500px; height: 450px; top: 10%; left: 30%;">
+            <div class="window-header">
+                <div class="title">Minha Curadoria</div>
+                <div class="controls">
+                    <button class="btn-win close" onclick="toggleWindow('curatoriaWindow')">X</button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="nav-tabs">
+                    <div class="nav-tab active" onclick="switchCuratedTab('links')">Links</div>
+                    <div class="nav-tab" onclick="switchCuratedTab('fotos')">Fotos</div>
+                    <div class="nav-tab" onclick="switchCuratedTab('filmes')">Filmes</div>
+                </div>
+                
+                <div class="task-input-area" style="margin-bottom: 15px;">
+                    <input type="text" id="curatedTitle" placeholder="Título">
+                    <input type="text" id="curatedUrl" placeholder="URL">
+                    <button class="btn-glossy-small" onclick="addCuratedItem()">+</button>
+                </div>
+
+                <div id="curatedContent" class="curated-grid"></div>
+            </div>
+        </div>
+
+        <div class="aero-window" id="comunidadeWindow" style="display: none; width: 400px; height: 500px; top: 10%; left: 50%;">
+            <div class="window-header">
+                <div class="title">AeroChat</div>
+                <div class="controls">
+                    <button class="btn-win close" onclick="toggleWindow('comunidadeWindow')">X</button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="chat-messages" id="chatMessages">
+                    <div style="text-align: center; color: #999; font-size: 12px;">Carregando mensagens...</div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" placeholder="Digite sua mensagem..." onkeypress="handleChatEnter(event)">
+                    <button onclick="sendMessage()">📨</button>
+                </div>
             </div>
         </div>
 
@@ -78,8 +164,7 @@
             <img src="https://img.icons8.com/fluency/48/windows-client.png" alt="Start">
             <span>Iniciar</span>
         </div>
-        <div class="task-items" id="openWindowsList">
-            </div>
+        <div class="task-items" id="openWindowsList"></div>
         <div class="tray-area">
             <span id="clock">12:00</span>
         </div>
