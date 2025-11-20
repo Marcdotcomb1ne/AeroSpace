@@ -68,14 +68,14 @@ async function loadProfile() {
             // Aplicar mood
             if (profile.mood && profile.mood_text) {
                 const moodEmojis = {
-                    'chill': '😊',
-                    'sad': '😢',
-                    'hyper': '🤩',
-                    'retro': '🌈',
-                    'cyber': '🤖',
-                    'zen': '🧘'
+                    'chill': ':)',
+                    'sad': ':(',
+                    'hyper': ':D',
+                    'retro': ':O',
+                    'cyber': ':|',
+                    'zen': ':P'
                 };
-                document.getElementById('moodIcon').innerText = moodEmojis[profile.mood] || '😊';
+                document.getElementById('moodIcon').innerText = moodEmojis[profile.mood] || ':)';
                 document.getElementById('moodText').innerText = profile.mood_text;
             }
         }
@@ -460,7 +460,7 @@ function renderTasks(tasks) {
     list.innerHTML = '';
 
     if (tasks.length === 0) {
-        list.innerHTML = '<li class="task-msg">Nada pendente. Aproveite a brisa! 🍃</li>';
+        list.innerHTML = '<li class="task-msg">Nada pendente. Aproveite a brisa!</li>';
         return;
     }
 

@@ -1,5 +1,4 @@
 #desktop-area {
-    width: 100vw;
     height: calc(100vh - 40px);
     position: relative;
     overflow: hidden;
@@ -285,7 +284,7 @@
 .chat-input-area input {
     flex: 1;
     padding: 8px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid #8aa8bd;
     outline: none;
 }
@@ -293,8 +292,7 @@
 .chat-input-area button {
     background: linear-gradient(#e6f0fa, #b6d8f0);
     border: 1px solid #8aa8bd;
-    border-radius: 50%;
-    width: 36px;
+    border-radius: 10px;
     height: 36px;
     cursor: pointer;
     font-weight: bold;
@@ -406,7 +404,7 @@
     text-align: center;
     padding: 15px;
     font-style: italic;
-    color: #004d40;
+    color: #5e5e5e;
     opacity: 0.7;
 }
 

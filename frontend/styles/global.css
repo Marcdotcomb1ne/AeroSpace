@@ -1,13 +1,9 @@
-/* Fundo do Desktop */
 body {
-    background: url('/assets/imgs/wallpaper.jpg') no-repeat center center fixed;
-    background-size: cover;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     height: 100vh;
     overflow: hidden;
 }
 
-/* A Janela de Vidro (Glassmorphism Frutiger Style) */
 .aero-window {
     width: 350px;
     background: linear-gradient(
@@ -16,21 +12,20 @@ body {
         rgba(255, 255, 255, 0.4) 40%, 
         rgba(255, 255, 255, 0.6) 100%
     );
-    backdrop-filter: blur(12px); /* O desfoque do vidro */
+    backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.2), /* Sombra projetada */
-        inset 0 1px 0 rgba(255, 255, 255, 0.9); /* Brilho na borda superior */
+        0 10px 30px rgba(0, 0, 0, 0.2), 
+        inset 0 1px 0 rgba(255, 255, 255, 0.9); 
     position: absolute;
     top: 100px;
     left: 100px;
 }
 
-/* Cabeçalho da Janela */
 .window-header {
     padding: 8px 10px;
-    background: linear-gradient(to bottom, #e8f1f7 0%, #cee2f0 100%); /* Azul pálido Vista */
+    background: linear-gradient(to bottom, #e8f1f7 0%, #cee2f0 100%);
     border-radius: 7px 7px 0 0;
     display: flex;
     justify-content: space-between;
@@ -49,13 +44,11 @@ body {
 
 .window-title img { width: 20px; height: 20px; }
 
-/* Conteúdo Interno */
 .window-content {
     padding: 15px;
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* O Botão "Glossy" (Gelatina) */
 .btn-glossy {
     background: linear-gradient(to bottom, #f2f9fe 0%, #d6f0fd 50%, #bee6fd 51%, #a7d9f5 100%);
     border: 1px solid #3d8eb9;
@@ -71,7 +64,6 @@ body {
     background: linear-gradient(to bottom, #eaf6fd 0%, #c2e9fc 50%, #a3dcfc 51%, #8bcbf7 100%);
 }
 
-/* Lista de Tasks */
 .glass-list li {
     background: rgba(255, 255, 255, 0.5);
     margin-top: 8px;

@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body id ="desktop-area">
 
-    <div id="desktop-area">
+    <div id="div">
         
         <div class="desktop-icons">
             <div class="desktop-icon" onclick="toggleWindow('profileWindow')">
@@ -35,7 +35,7 @@
         </div>
 
         <div class="mood-widget" onclick="toggleWindow('moodSelector')">
-            <div class="mood-icon" id="moodIcon">😊</div>
+            <div class="mood-icon" id="moodIcon">:)</div>
             <div class="mood-text" id="moodText">Vibe tranquila</div>
         </div>
 
@@ -48,28 +48,28 @@
             </div>
             <div class="window-body">
                 <div class="mood-options">
-                    <div class="mood-option" onclick="setMood('chill', '😊', 'Vibe tranquila')">
-                        <span class="emoji">😊</span>
+                    <div class="mood-option" onclick="setMood('chill', ':)', 'Vibe tranquila')">
+                        <span class="emoji">:)</span>
                         <span class="label">Tranquilo</span>
                     </div>
-                    <div class="mood-option" onclick="setMood('sad', '😢', 'Chovendo por dentro')">
-                        <span class="emoji">😢</span>
+                    <div class="mood-option" onclick="setMood('sad', ':(', 'Chovendo por dentro')">
+                        <span class="emoji">:(</span>
                         <span class="label">Melancólico</span>
                     </div>
-                    <div class="mood-option" onclick="setMood('hyper', '🤩', 'Energia total!')">
-                        <span class="emoji">🤩</span>
+                    <div class="mood-option" onclick="setMood('hyper', ':D', 'Energia total!')">
+                        <span class="emoji">:D</span>
                         <span class="label">Hypado</span>
                     </div>
-                    <div class="mood-option" onclick="setMood('retro', '🌈', 'Nostalgia pura')">
-                        <span class="emoji">🌈</span>
+                    <div class="mood-option" onclick="setMood('retro', ':O', 'Nostalgia pura')">
+                        <span class="emoji">:O</span>
                         <span class="label">Nostálgico</span>
                     </div>
-                    <div class="mood-option" onclick="setMood('cyber', '🤖', 'Vibe futurista')">
-                        <span class="emoji">🤖</span>
-                        <span class="label">Futurista</span>
+                    <div class="mood-option" onclick="setMood('cyber', ':|', 'Meh')">
+                        <span class="emoji">:|</span>
+                        <span class="label">Meh</span>
                     </div>
-                    <div class="mood-option" onclick="setMood('zen', '🧘', 'Paz interior')">
-                        <span class="emoji">🧘</span>
+                    <div class="mood-option" onclick="setMood('zen', ':P', 'Paz interior')">
+                        <span class="emoji">:P</span>
                         <span class="label">Zen</span>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
                 </div>
                 <div class="chat-input-area">
                     <input type="text" id="chatInput" placeholder="Digite sua mensagem..." onkeypress="handleChatEnter(event)">
-                    <button onclick="sendMessage()">📨</button>
+                    <button onclick="sendMessage()">Enviar</button>
                 </div>
             </div>
         </div>
